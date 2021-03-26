@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion</title>
+    <script src="script.js" defer></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #indicplayer {
+            text-align: center;
+            font-size: 5em;
+            color: brown;
+            min-height: 92px;
+        }
+
+        button {
+            width: 300px;
+            height: 50px;
+            background-color: transparent;
+            display: block;
+            margin: 50px auto 0 auto;
+            border: 2px solid brown;
+            border-radius: 10px;
+            font-size: 2em;
+        }
+
+        button:hover {
+            border: 2px solid rgb(110, 28, 28);
+            background-color: rgb(224, 224, 224);
+            transition: 0.5s;
+        }
+
+        .container {
+            width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "c0 c1 c2"
+                "c3 c4 c5"
+                "c6 c7 c8";
+            grid-gap: 0px;
+        }
+
+        .case {
+            font-size: 10em;
+            text-align: center;
+            line-height: 300px;
+            width: 300px;
+            height: 300px;
+            background-color: bisque;
+        }
+
+        #c0,
+        #c1,
+        #c2 {
+            border-bottom: 5px solid black;
+        }
+
+        #c8,
+        #c7,
+        #c6 {
+            border-top: 5px solid black;
+        }
+
+        #c1,
+        #c4,
+        #c7 {
+            border-left: 5px solid black;
+            border-right: 5px solid black;
+        }
+
+        #c0 {
+            grid-area: c0;
+        }
+
+        #c1 {
+            grid-area: c1;
+        }
+
+        #c2 {
+            grid-area: c2;
+        }
+
+        #c3 {
+            grid-area: c3;
+        }
+
+        #c4 {
+            grid-area: c4;
+        }
+
+        #c5 {
+            grid-area: c5;
+        }
+
+        #c6 {
+            grid-area: c6;
+        }
+
+        #c7 {
+            grid-area: c7;
+        }
+
+        #c8 {
+            grid-area: c8;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="numPlayer"></div>
+    <!-- <button onclick="play()">Jouer</button> -->
+    <p id="indicplayer"></p>
+    <div class="container" id="container">
+        <div class="case" id="c0" data-id="0">0</div>
+        <div class="case" id="c1" data-id="1">1</div>
+        <div class="case" id="c2" data-id="2">2</div>
+        <div class="case" id="c3" data-id="3">3</div>
+        <div class="case" id="c4" data-id="4">4</div>
+        <div class="case" id="c5" data-id="5">5</div>
+        <div class="case" id="c6" data-id="6">6</div>
+        <div class="case" id="c7" data-id="7">7</div>
+        <div class="case" id="c8" data-id="8">8</div>
+    </div>
+    <button onclick="playVisu()">Jouer</button>
+</body>
+
+</html>
